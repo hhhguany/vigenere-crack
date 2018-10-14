@@ -135,13 +135,6 @@ def crackKey(line,keyLehgth=6):
     return key
 
 def main():
-    
-
-    probKeyLength=0 
-    for line in infile:
-        crackKey(line,6)
-
-if __name__=='__main__':
     filename = "message.txt"
     infile = open(filename, "r")
     for line in infile:
@@ -149,3 +142,6 @@ if __name__=='__main__':
         for i in range(0,len(probKeyLength)):
             key = crackKey(line,probKeyLength[i])
             print(key)
+
+if __name__=='__main__':
+    main()
